@@ -1,0 +1,82 @@
+<style type="text/css">
+    .welcome-div{
+        padding: 20px 10px;
+        background-color: #a9ffb0;
+        margin-bottom: 30px;
+    }
+    .welcome-div h1{
+        font-size: 22px;
+    }
+    .welcome-div i{
+        float: right;
+        font-size: 50px;
+        line-height: 20px;
+        color: #178404;
+        font-weight: 500;
+    }
+    .block{
+        width: 98%;
+        margin: 10px auto;
+        padding: 10px;
+        min-height: 80px;
+        background-color: #dc0f48;
+        border-radius: 10px;
+        font-size: 12px;
+    }
+    hr.dashboard_partition {
+  border: 1px solid rgba(9,9,9,0.22);
+}
+</style>
+<div class="container"> 
+    <h1 style="color: #dc0f48;margin: 30px 0px;font-weight:bold">DASHBOARD</h1>
+    <div class="row">
+        <div class="col s12">
+            <div class="welcome-div">
+                <!-- <h1>Welcome, <span id="uname"></span><i class="fa fa-smile-o" aria-hidden="true"></i></h1> -->
+                <h1>Welcome, <br><br><span id="uname"></span></h1>
+            </div>
+        </div>
+        <div class="col s12">
+        <h4>Last Month Summary:</h4>
+    </div>
+        <div class="col s6">
+            <div class="block" style="background-color: #cc0000;">
+                <div style="text-align: center;margin-top: 5px;">
+                    <span id="torder" class="counter-anim" style="color: white;">0</span><br>
+                    <span class="weight-500" style="color: white;">Total Pickup</span>
+                </div>
+            </div>
+        </div>
+        <div class="col s6">
+            <div class="block" style="background-color: #cc0000;">
+                <div style="text-align: center;margin-top: 5px;">
+                    <span id="pcancel" class="counter-anim" style="color: white;">0</span><br>
+                    <span class="weight-500" style="color: white;">Total Delivery</span>
+                </div>
+            </div>
+        </div>
+        
+        <hr class="dashboard_partition">
+        <div class="col s12">
+            <h4>Current Month Summary:</h4>
+        </div>
+        <div class="col s6">
+            <div class="block" style="background-color: #cc0000;">
+                <div style="text-align: center;margin-top: 5px;">
+                    <span style="color: white;"><span class="counter-anim" style="color: white;" id="tsales">0</span></span><br>
+                    <span class="weight-500" style="color: white;">Total Pickup</span>
+                </div>
+            </div>
+        </div>
+        <div class="col s6">
+            <div class="block" style="background-color: #cc0000;">
+                <div style="text-align: center;margin-top: 5px;">
+                    <span style="color: white;"><span class="counter-anim" style="color: white;" id="tpaid">0</span></span><br>
+                    <span class="weight-500" style="color: white;">Total Delivery</span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<script src="APPS/main/modules/home.js"></script>

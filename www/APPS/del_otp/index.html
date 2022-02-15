@@ -1,0 +1,55 @@
+<style type="text/css">
+    .manuTab{
+        text-align: left;
+        padding: 20px 0px 10px;
+    }
+    .manuTab h3{
+        color: #99211d;
+    }
+    .hist-date{
+        font-size: 20px;
+        padding: 10px 0px;
+        text-decoration: underline;
+    }
+    .items{
+        background-color: #ececec;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    select {
+    /* background-color: rgba(255, 255, 255, 0.9); */
+    width: 101% !important;
+    /* padding: 5px 0px 5px 20px !important; */
+    border: #99211d 1px solid !important;
+    /* border-radius: 2px; */
+    height: 3.8rem;
+    /* margin-left: 10px !important; */
+    border-radius: 5px;
+}
+</style>
+<div class="container"> 
+    <div class="row">
+        <div class="col s12">
+            <div class="manuTab active">
+                <h3 STYLE="font-weight:bold">SUBMIT OTP</h3>
+            </div>
+        </div>
+             <div class="constkt" id="constkt">
+                
+             </div>
+             <div class="col s12">
+                <div class="input-wrapper">
+                    <input type="number" id="otp" placeholder="ENTER OTP"/>
+                    <input type="hidden" id="consignmenttt_id">
+                </div>
+            </div>
+            <div class="col s12">
+                <div class="input-wrapper">
+                    <button  id="submitdelotp" >SUBMIT</button>
+                </div>
+            </div>
+    </div>
+</div>
+<script src="APPS/del_otp/modules/del_otp.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>

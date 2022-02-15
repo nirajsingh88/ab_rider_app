@@ -1,0 +1,113 @@
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+
+<!-- jQuery library -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+<!-- Latest compiled JavaScript -->
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+<style>
+    /* body {
+      font-family: Arial;
+    } */
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    form.example input[type=text] {
+      padding: 10px;
+      font-size: 17px;
+      border: 1px solid grey;
+      float: left;
+      width: 80%;
+      background: #f1f1f1;
+    }
+    
+    form.example button {
+      float: left;
+      width: 20%;
+      /* padding: 0px; */
+      background: #2196F3;
+      color: white;
+      font-size: 13px;
+      border: 1px solid grey;
+      border-left: none;
+      cursor: pointer;
+    }
+    
+    form.example button:hover {
+      background: #0b7dda;
+    }
+    
+    form.example::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    </style>
+<style type="text/css">
+    .manuTab{
+        text-align: left;
+        padding: 20px 0px 10px;
+    }
+    .manuTab h3{
+        color: #99211d;
+    }
+    .hist-date{
+        font-size: 20px;
+        padding: 10px 0px;
+        text-decoration: underline;
+    }
+    .items{
+        background-color: #ececec;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    
+    form.example button {
+    font-size: 20px;
+}
+</style>
+<div class="container"> 
+    <div class="row">
+        <div class="col s12">
+            <div class="manuTab active">
+                <h3 STYLE="font-weight:bold">PICKUP LIST</h3>
+            </div>
+        </div>
+
+        <!-- <div class="col s12">
+            <div class="input-wrapper">
+                <input type="text" id="cussname" placeholder="Customer Name / Mobile No."/>
+            </div>
+        </div>
+        <div class="col s12" style="margin-bottom: 10px;">
+            <div class="input-wrapper">
+                <button  id="searchcus" >Search</button>
+            </div>
+        </div> -->
+
+        
+        <!-- <div class="col s12"> -->
+        <!-- <div class="input-wrapper"> -->
+        <form class="example" id="example">
+            <input type="text" id="cussname" placeholder="Full Merchant Name / Mobile No." name="search">
+            <button id="searchcus"><i class="fa fa-search"></i></button>
+          </form>
+        <!-- </div> -->
+    <!-- </div> -->
+
+         <div class="col s12" id="orderHist">
+             <div class="hist-item" id="hist-item">
+                 <!-- <div class="hist-date">17th March, 2021</div> -->
+                 <!-- <div class="items">
+                     <h3>Order</h3>
+                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has........</p>
+                 </div> -->
+             </div>
+             <div style="float: right;color: blue;" id="showmore">Show more</div>
+        </div>
+    </div>
+</div>
+<script src="APPS/order_history/modules/order.js"></script>

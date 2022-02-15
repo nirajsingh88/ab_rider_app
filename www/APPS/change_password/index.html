@@ -1,0 +1,52 @@
+<style type="text/css">
+    .manuTab{
+        text-align: left;
+        padding: 20px 0px 10px;
+    }
+    .manuTab h3{
+        color: #99211d;
+    }
+    .hist-date{
+        font-size: 20px;
+        padding: 10px 0px;
+        text-decoration: underline;
+    }
+    .items{
+        background-color: #ececec;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+</style>
+<div class="container"> 
+    <div class="row">
+        <div class="col s12">
+            <div class="manuTab active">
+                <h3 STYLE="font-weight:bold">UPDATE PASSWORD</h3>
+            </div>
+        </div>
+        <div class="col s12">
+            <div class="input-wrapper">
+                <input type="password" id="oldpass" placeholder="Old Password"/>
+            </div>
+        </div>
+        <div class="col s12">
+            <div class="input-wrapper">
+                <input type="password" id="newpass" placeholder="New Password"/>
+            </div>
+        </div>
+        <div class="col s12">
+            <div class="input-wrapper">
+                <input type="password" id="confpass" placeholder="Confirm Password"/>
+            </div>
+        </div>
+
+        <div class="col s12">
+            <div class="input-wrapper">
+                <button  id="updatepass" >Update</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="APPS/change_password/modules/change_password.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>

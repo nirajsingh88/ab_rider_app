@@ -1,0 +1,99 @@
+<style type="text/css">
+    .manuTab{
+        text-align: left;
+        padding: 20px 0px 10px;
+    }
+    .manuTab h3{
+        color: #99211d;
+    }
+    select {
+    /* background-color: rgba(255, 255, 255, 0.9); */
+    width: 101% !important;
+    /* padding: 5px 0px 5px 20px !important; */
+    border: #99211d 1px solid !important;
+    /* border-radius: 2px; */
+    height: 3.8rem;
+    /* margin-left: 10px !important; */
+    border-radius: 5px;
+}
+hr.total_partition {
+  border: 1px solid green;
+}
+</style>
+<div class="container"> 
+    <div class="row">
+        <div class="col s12">
+            <div class="manuTab active">
+                <h3 STYLE="font-weight:bold">UPDATE PROFILE</h3>
+            </div>
+        </div>
+
+        <div class="col s12">
+            <div class="input-wrapper">
+                <h4>Personal Information</h4>
+            </div>
+        </div>
+         <div class="col s12">
+            <div class="input-wrapper">
+                <input type="text" id="transporter_id" placeholder="TRANSPORTER ID" readonly/>
+            </div>
+        </div>
+        <div class="col s12">
+            <div class="input-wrapper">
+                <input type="text" id="name" placeholder="Name" readonly/>
+            </div>
+        </div>
+        <div class="col s12">
+            <div class="input-wrapper">
+                <input type="number" id="phno" placeholder="Contact Number" readonly/>
+            </div>
+        </div>
+        <div class="col s12">
+            <div class="input-wrapper">
+                <input type="text" id="email" placeholder="Email" readonly/>
+            </div>
+        </div>
+        <div class="col s12">
+            <div class="input-wrapper">
+                <input type="text" id="address" placeholder="Address" readonly/>
+            </div>
+        </div>
+        <div class="col s12">
+            <div class="input-wrapper">
+                <input type="text" id="salary" placeholder="Salary" readonly/>
+            </div>
+        </div>
+        <div class="col s12">
+            <div class="input-wrapper">
+                <input type="text" id="del_com" placeholder="Delivery Commission" readonly/>
+            </div>
+        </div>
+        <div class="col s12">
+            <div class="input-wrapper">
+                <input type="text" id="pick_com" placeholder="Pickup Commission" readonly/>
+            </div>
+        </div>
+        <div class="col s12">
+            <div class="input-wrapper">
+                <input type="text" id="oil_bill" placeholder="Oil Bill" readonly/>
+            </div>
+        </div>
+
+        
+        <div class="col s12">
+            <div class="input-wrapper">
+                <select id="office" class="select2 office-cls">
+               
+                </select>
+            </div>
+        </div>
+        
+        <!-- <div class="col s12">
+            <div class="input-wrapper">
+                <button  id="updateprofile" >Update</button>
+            </div>
+        </div> -->
+    </div>
+</div>
+<script src="APPS/profile/modules/profile.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>

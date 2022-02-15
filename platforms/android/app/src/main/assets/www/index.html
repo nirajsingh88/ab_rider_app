@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no,height=device-height, viewport-fit=cover">
+  <meta name="description" content="">
+  <meta name="author" content="DokuMe">
+  <title >The Refresh</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/line-awesome.css">
+    <link rel="stylesheet" href="css/line-awesome-font-awesome.css">
+    <link rel="stylesheet" href="css/style.css">
+
+  <meta name="theme-color" content="#563d7c">
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="container">
+        <div class="row">
+            <div class="col s3" style="margin-top: 15px;">
+                <a href="#slide-out" data-activates="slide-out" class="sidebar"><i class="fa fa-align-left"></i></a>
+            </div>
+            <div class="col s6" style="text-align: center;">
+                <a href="#/main"><img src="img/logo.png" class="logo-img"></a>
+            </div>
+            <div class="col s3">
+                <div class="content-right">
+                    <!-- <a href="#slide-out-cart" data-activates="slide-out-cart" class="sidebar-search"><i class="fa fa-search"></i></a> -->
+                    <!-- <a href="#slide-out-right" data-activates="slide-out-right" class="sidebar-cart">
+                        <i class="fa fa-bell"></i>
+                        <sup>3</sup>
+                    </a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end navbar -->
+
+<!-- sidebar -->
+<div class="sidebar-panel" style="margin-bottom: 0px;">
+    <ul id="slide-out" class="side-nav">
+        <li class="active">
+            <div class="collapsible-header user active">
+                <!-- <i class="fa fa-user profile-icon"></i> -->
+                <img id="myImg" src="img/logo.png" class="logo-img" style="width: 90px;height: 40px;">
+                <p style="float: right;margin-top: 15px;" class="name-txt"><b id="cname">Menu</b></p>
+                <!-- <p class="name-txt"><b id="cname">Menu</b><span><i class="fa fa-angle-right right"></i></span></p> -->
+            <!-- </div>
+            <div class="collapsible-body" style="display:none;">
+                <ul class="sidenav sidenav-close">
+                    <li><a href="#/profile"><i class="fa fa-user"></i>Profile</a></li>
+                    <li><a id="logout"><i class="fa fa-share"></i>Log Out</a></li>
+                </ul>
+            </div> -->
+        </li>
+        <li><a href="#/profile"><i class="fa fa-user"></i>Profile</a></li>
+        <!-- <li><a href="#/payment"><i class="fa fa-cc-visa"></i>Payment</a></li> -->
+        <li><a id="logout"><i class="fa fa-share"></i>Log Out</a></li>
+    </ul>
+</div>
+<!-- end sidebar -->
+
+<!-- sidebar -->
+<div class="sidebar-panel sidebar-right-search">
+    <ul id="slide-out-right" class="collapsible side-nav notification">
+        <li>
+            <h5>Notification</h5></li>
+            <hr class="hr-line" style="margin-bottom: 10px;">
+        <li><i class="fa fa-bell-o"></i> Lorem ipsum dolor sit.</li>
+        <li><i class="fa fa-bell-o"></i> Lorem ipsum dolor sit.</li>
+        <li><i class="fa fa-bell-o"></i> Lorem ipsum dolor sit.</li>
+    </ul>
+</div>
+<!-- end sidebar -->
+
+<!-- sidebar wishlist -->
+<div class="sidebar-panel sidebar-right-cart">
+    
+</div>
+<div id="main" class="container"></div>
+<!-- end footer -->
+<div class="btm-mnu">
+    <div class="container">
+        <div class="tab-btm-menu row" style="margin-bottom: 0px;">
+            <div class="col s5">
+                <ul>
+                    <li><a href="#/main" class="btm-link on-load ripple"><i class="fa fa-home"></i></a></li>
+                    <li><a href="#order_history" class="ripple"><i class="fa fa-list"></i></a></li>
+                    <!-- <li><a href="#/payment_history" class="ripple"><i class="fa fa-ticket"></i></a></li> -->
+                    
+                </ul>
+            </div>
+            <div class="col s2">
+                
+            </div>
+            <div class="col s5">
+                <ul>
+                    <li><a href="#current_order" class="btm-link on-load ripple"><i class="fa fa-bar-chart"></i></a></li>
+                    <!-- <li><a href="#payment_list" class="ripple"><i class="fa fa-money"></i></a></li> -->
+                    <li><a href="#change_password" class="ripple"><i class="fa fa-cog"></i></a></li>
+                    
+                </ul>
+            </div>
+            <a id="place_order" class="ripple footer-plus"><i class="fa fa-archive"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <!-- <script src="cordova.js"></script> -->
+  <script src="js/jquery.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/styleswitcher.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/dokume/config.js"></script>
+    <script src="js/dokume/core.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+
+
+  <!---------ROUTING-------------->
+  <script src="js/routing/signals.js"></script>
+  <script src="js/routing/hasher.min.js"></script>
+  <script src="js/routing/crossroads.min.js"></script>
+  <script src="js/routing/routing.js"></script>
+</body>
+
+</html>

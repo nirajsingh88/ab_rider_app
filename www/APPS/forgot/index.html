@@ -1,0 +1,33 @@
+<style type="text/css">
+    .manuTab{
+        text-align: center;
+        padding: 20px 0px 10px;
+        margin-bottom: 30px;
+    }
+    .manuTab.active{
+        border-bottom: #99211d 5px solid;
+    }
+</style>
+<div class="container"> 
+    <div class="row">
+        <div class="col s12">
+            <div class="manuTab active">
+                <h3 STYLE="font-weight:bold">RESET PASSWORD</h3>
+            </div>
+        </div>
+        <div class="col s12">
+            <div class="input-wrapper">
+                <input type="text" id="email" placeholder="Email"/>
+            </div>
+        </div>
+        <div class="col s12">
+            <div class="input-wrapper">
+                <button  id="reset" >Send Email</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="APPS/forgot/modules/forgot.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
