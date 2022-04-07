@@ -49,18 +49,45 @@
     DM_CORE.apiForm('conslist',form,function(res){
       ++pageNum;
       console.log(res.consdetail);
-      var allcons = res.consdetail;
+      // var allcons = res.consdetail;
+      var a = res.consdetail;
       var htm = "";
       var dstatus = "";
       var scolor = "";
-      for(var i =0;i<allcons.length;i++){
+
+      let finalObj = {}
+      a.forEach((consignment) => {
+        const date = consignment.assignedDate
+        if (finalObj[date]) {
+          finalObj[date].push(consignment);
+        } else {
+          finalObj[date] = [consignment];
+        }
+      })
+      console.log(finalObj);
+      Object.keys(finalObj).forEach(function(key) {
         htm +=`<div class="items">
-        <h3>${allcons[i].consignment_id}</h3>
-        <p><b>Merchant Name : </b>${allcons[i].merchant_name}</p>
-        <p><b>Address : </b>${allcons[i].merchant_address}</p>
-        <p><b>Phone : </b>${allcons[i].merch_phone}<a style ="float:right;color:blue;" href="tel:${allcons[i].merch_phone}"><i class="fa fa-phone" style="font-size:28px;color:green"></i></a></p>
+          <center>
+          <h3 style="color:#99211d;">${key}</h3></center>
+      </div>`;
+      const alllist = finalObj[key],
+      result = Object.values(alllist.reduce((r, { merchant_company,merchant_name,merchant_address,merch_phone}) => {
+        r[merchant_company] ??= { merchant_company, count: 0,merchant_name: merchant_name, merchant_address: merchant_address, merch_phone: merch_phone};
+        r[merchant_company].count++;
+        return r;
+    }, {}));
+      for(var i =0;i<result.length;i++){
+        htm +=`<div class="items">
+        <h3>${result[i].merchant_company}</h3>
+        <p><b>Merchant Name : </b>${result[i].merchant_name}</p>
+        <p><b>Address : </b>${result[i].merchant_address}</p>
+        <p><b>Phone : </b>${result[i].merch_phone}<button class="btn-small" style ="float:right;color:blue;"><a onclick="playAudioCall();" href="tel:0${result[i].merch_phone}"><i class="fa fa-phone"></i></a></button></p>
     </div>`;
       }
+      
+      });
+
+      
       $("#hist-item").html(htm);
     })
     }
@@ -80,18 +107,45 @@
     DM_CORE.apiForm('conslist',form,function(res){
       ++pageNum;
       console.log(res.consdetail);
-      var allcons = res.consdetail;
+      // var allcons = res.consdetail;
+      var a = res.consdetail;
       var htm = "";
       var dstatus = "";
       var scolor = "";
-      for(var i =0;i<allcons.length;i++){
+      let finalObj = {}
+      a.forEach((consignment) => {
+        const date = consignment.assignedDate
+        if (finalObj[date]) {
+          finalObj[date].push(consignment);
+        } else {
+          finalObj[date] = [consignment];
+        }
+      })
+      console.log(finalObj);
+      Object.keys(finalObj).forEach(function(key) {
         htm +=`<div class="items">
-        <h3>${allcons[i].consignment_id}</h3>
-        <p><b>Merchant Name : </b>${allcons[i].merchant_name}</p>
-        <p><b>Address : </b>${allcons[i].merchant_address}</p>
-        <p><b>Phone : </b>${allcons[i].merch_phone}<a style ="float:right;color:blue;" href="tel:${allcons[i].merch_phone}"><i class="fa fa-phone" style="font-size:28px;color:green"></i></a></p>
+          <center>
+          <h3 style="color:#99211d;">${key}</h3></center>
+      </div>`;
+      // var allcons = finalObj[key];
+
+      const alllist = finalObj[key],
+      result = Object.values(alllist.reduce((r, { merchant_company,merchant_name,merchant_address,merch_phone}) => {
+        r[merchant_company] ??= { merchant_company, count: 0,merchant_name: merchant_name, merchant_address: merchant_address, merch_phone: merch_phone};
+        r[merchant_company].count++;
+        return r;
+    }, {}));
+
+      for(var i =0;i<result.length;i++){
+        htm +=`<div class="items">
+        <h3>${result[i].merchant_company}</h3>
+        <p><b>Merchant Name : </b>${result[i].merchant_name}</p>
+        <p><b>Address : </b>${result[i].merchant_address}</p>
+        <p><b>Phone : </b>${result[i].merch_phone}<button class="btn-small" style ="float:right;color:blue;"><a onclick="playAudioCall();" href="tel:0${result[i].merch_phone}"><i class="fa fa-phone"></i></a></button></p>
     </div>`;
       }
+      
+      });
       $("#hist-item").append(htm);
     })
     }

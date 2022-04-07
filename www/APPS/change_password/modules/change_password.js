@@ -39,6 +39,7 @@
           window.location.href = "#/login";
             }, 1000);
     } else {
+      erroraudio.play();
         swal({
               title: "Failure!",
               text: res.message,

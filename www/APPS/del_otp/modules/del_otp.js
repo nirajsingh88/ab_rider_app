@@ -27,8 +27,9 @@
     var cusotp = $('#otp').val();
 
     if(cusotp == ''){
+      erroraudio.play();
       alert('Please enter the OTP first');
-      return false;
+      return false; 
     }
 
     var form = new FormData();

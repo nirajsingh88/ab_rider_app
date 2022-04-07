@@ -1981,6 +1981,8 @@ footer p {
 }
 .tab-btm-menu ul li {
     display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 .tab-btm-menu ul{
     text-align: center;

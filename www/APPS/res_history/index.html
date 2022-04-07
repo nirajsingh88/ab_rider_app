@@ -1,0 +1,64 @@
+<style type="text/css">
+    .manuTab{
+        text-align: left;
+        padding: 20px 0px 10px;
+    }
+    .manuTab h3{
+        color: #99211d;
+    }
+    .hist-date{
+        font-size: 20px;
+        padding: 10px 0px;
+        text-decoration: underline;
+    }
+    .items{
+        background-color: #ececec;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .headTab{
+        text-align: center;
+        padding: 20px 0px 10px;
+    }
+
+    .manuTab{
+        text-align: center;
+        padding: 20px 0px 10px;
+        margin-bottom: 30px;
+    }
+    .manuTab.active{
+        border-bottom: #99211d 5px solid;
+    }
+</style>
+<div class="container"> 
+    <div class="row">
+        <div class="col s12">
+            <div class="headTab">
+                <h3 STYLE="font-weight:bold;color: #99211d;">PICKUP HISTORY</h3>
+            </div>
+        </div>
+        <div class="col s6">
+            <div class="manuTab active">
+                <h3>This Month</h3>
+            </div>
+        </div>
+        <div class="col s6">
+            <div class="manuTab">
+                <h3><a  onclick="playAudio();" href="#/res_history_last">Last Month</a></h3>
+            </div>
+        </div>
+         <div class="col s12" id="orderHist">
+             <div class="fin-item" id="fin-item">
+                 <!-- <div class="hist-date">17th March, 2021</div> -->
+                 <!-- <div class="items">
+                    <center>
+                    <h3 style="color:#99211d;">NO RECEIVE ASSIGNMENT</h3></center>
+                </div> -->
+             </div>
+             <!-- <div style="float: right;color: blue;" id="showmore">Show more</div> -->
+        </div>
+    </div>
+</div>
+<script src="APPS/res_history/modules/res_history.js"></script>

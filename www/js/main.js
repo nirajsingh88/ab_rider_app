@@ -1,3 +1,6 @@
+let audio = new Audio("audio/mixkit-modern-technology-select-3124.wav");
+let callaudio = new Audio("audio/122670__acollier123__kit-tm-01.wav");
+let erroraudio = new Audio("audio/135125__ecfike__computer-error.wav");
 $(function() {
     'use strict';
 
@@ -19,6 +22,7 @@ $(function() {
         edge: 'right'
     });
 
+    getVersionInfo();
 
     // navbar on scroll
     /*$(window).on('scroll', function() {
@@ -50,7 +54,7 @@ $(function() {
         items: 1,
         dots: false
     });
-    document.getElementById("cname").innerHTML = userConfig.transporter_type;
+    document.getElementById("cname").innerHTML = capitalizeFirstLetter(userConfig.transporter_type);
     // if(userConfig.logo != ""){
     // document.getElementById("myImg").src = "https://amarbahok.com/uploads/merchants/"+userConfig.logo;
     // }
@@ -116,6 +120,27 @@ $(function() {
 
 });
 
+function getVersionInfo(){
+  var version = 1;
+var form = new FormData();
+form.append("version", version);
+
+DM_CORE.apiForm('versionifno',form,function(res){
+  console.log(res);
+  if(res.app_ver !=  version){
+    swal({
+      title: "Update",
+      text: "this version of Amar Bahok APP became obsolete! please download latest version from Google Play Store",
+      type: "success",
+      button: "UPDATE",
+  }).then(function() {
+      window.location = "https://play.google.com/store/apps/details?id=com.dokume.amarbahok";
+      // clearInterval(interlId);
+  });
+  }
+})
+}
+
 var myVar = setInterval(function(){
     getLocation();
   }, 60000);
@@ -136,7 +161,7 @@ function showPosition(position) {
   // "<br>Longitude: " + position.coords.longitude;
   var Latitude = position.coords.latitude;
    var Longitude= position.coords.longitude;
-  console.log(Latitude);
+  console.log(Latitude+'/'+Longitude);
 //   var form = new FormData();
 //     form.append("consid_toupdate", consid_toupdate);
 //     form.append("cusotp", cusotp);
@@ -160,6 +185,10 @@ $('#place_order').on('click',checkProfile);
 
 
 //cart
+var interlId = setInterval(function(){
+  getVersionInfo();
+}, 5000);
+
 jQuery('<div class="quantity-nav"><div class="quantity-button quantity-up">+</div><div class="quantity-button quantity-down">-</div></div>').insertAfter('.quantity input');
     jQuery('.quantity').each(function() {
       var spinner = jQuery(this),
@@ -201,5 +230,17 @@ jQuery('<div class="quantity-nav"><div class="quantity-button quantity-up">+</di
     function checkProfile(){
             window.location.href = "#/current_order"; 
       }
+      function playAudio(){
+        audio.play(); 
+  }
+  function playAudioCall(){
+    callaudio.play(); 
+}
+function playAudioError(){
+  erroraudio.play(); 
+}
 
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
     

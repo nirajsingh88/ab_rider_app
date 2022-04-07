@@ -1,3 +1,40 @@
+<style>
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    form.example input[type=text] {
+      padding: 10px;
+      font-size: 17px;
+      border: 1px solid grey;
+      float: left;
+      width: 80%;
+      background: #f1f1f1;
+    }
+    
+    form.example button {
+      float: left;
+      width: 20%;
+      /* padding: 0px; */
+      background: #2196F3;
+      color: white;
+      font-size: 13px;
+      border: 1px solid grey;
+      border-left: none;
+      cursor: pointer;
+    }
+    
+    form.example button:hover {
+      background: #0b7dda;
+    }
+    
+    form.example::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    </style>
 <style type="text/css">
     .manuTab{
         text-align: left;
@@ -17,6 +54,9 @@
         border-radius: 10px;
         margin-bottom: 10px;
     }
+    form.example button {
+    font-size: 20px;
+    }
 </style>
 <div class="container"> 
     <div class="row">
@@ -25,6 +65,12 @@
                 <h3 STYLE="font-weight:bold">DELIVERY LIST</h3>
             </div>
         </div>
+
+        <form class="example" id="example">
+            <input type="text" id="cussname" placeholder="Mobile No." name="search">
+            <button id="searchcus"><i class="fa fa-search"></i></button>
+          </form>
+
          <div class="col s12" id="orderHist">
              <div class="fin-item" id="fin-item">
                  <!-- <div class="hist-date">17th March, 2021</div> -->

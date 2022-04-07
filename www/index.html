@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no,height=device-height, viewport-fit=cover">
   <meta name="description" content="">
   <meta name="author" content="DokuMe">
-  <title >The Refresh</title>
+  <title >AmarBahok Rider App</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/materialize.css">
     <link rel="stylesheet" href="css/line-awesome.css">
@@ -57,9 +57,9 @@
                 </ul>
             </div> -->
         </li>
-        <li><a href="#/profile"><i class="fa fa-user"></i>Profile</a></li>
+        <li><a  onclick="playAudio();" href="#/profile"><i class="fa fa-user"></i>Profile</a></li>
         <!-- <li><a href="#/payment"><i class="fa fa-cc-visa"></i>Payment</a></li> -->
-        <li><a id="logout"><i class="fa fa-share"></i>Log Out</a></li>
+        <li><a  onclick="playAudio();" id="logout"><i class="fa fa-share"></i>Log Out</a></li>
     </ul>
 </div>
 <!-- end sidebar -->
@@ -86,27 +86,24 @@
 <div class="btm-mnu">
     <div class="container">
         <div class="tab-btm-menu row" style="margin-bottom: 0px;">
-            <div class="col s5">
+            <div class="col s12">
                 <ul>
-                    <li><a href="#/main" class="btm-link on-load ripple"><i class="fa fa-home"></i></a></li>
-                    <li><a href="#order_history" class="ripple"><i class="fa fa-list"></i></a></li>
-                    <!-- <li><a href="#/payment_history" class="ripple"><i class="fa fa-ticket"></i></a></li> -->
+                    <li><a id="buttoClick" onclick="playAudio();" href="#/main" class="btm-link on-load ripple"><i class="fa fa-home"></i></a></li>
+                    <li><a id="buttoClick" onclick="playAudio();" href="#order_history" class="ripple"><i class="fa fa-cart-arrow-down"></i></a></li>
+                    <li><a id="buttoClick" onclick="playAudio();" href="#/current_order" class="ripple"><i class="fa fa-archive"></i></a></li>
+                    
+                <!-- </ul> -->
+            <!-- </div> -->
+            <!-- <div class="col s6"> -->
+                <!-- <ul> -->
+                    <li><a id="buttoClick" onclick="playAudio();" href="#res_history" class="ripple"><i class="fa fa-history"></i></a></li>
+                    <li><a id="buttoClick" onclick="playAudio();" href="#all_history" class="btm-link on-load ripple"><i class="fa fa-check-circle-o"></i></a></li>
+                    <li><a id="buttoClick" onclick="playAudio();" href="#change_password" class="ripple"><i class="fa fa-cog"></i></a></li>
                     
                 </ul>
-            </div>
-            <div class="col s2">
-                
-            </div>
-            <div class="col s5">
-                <ul>
-                    <li><a href="#current_order" class="btm-link on-load ripple"><i class="fa fa-bar-chart"></i></a></li>
-                    <!-- <li><a href="#payment_list" class="ripple"><i class="fa fa-money"></i></a></li> -->
-                    <li><a href="#change_password" class="ripple"><i class="fa fa-cog"></i></a></li>
-                    
-                </ul>
-            </div>
-            <a id="place_order" class="ripple footer-plus"><i class="fa fa-archive"></i></a>
-            </div>
+            <!-- </div>
+            <a id="place_order" class="ripple footer-plus"><i class="fa fa-truck"></i></a>
+            </div> -->
         </div>
     </div>
 </div>
